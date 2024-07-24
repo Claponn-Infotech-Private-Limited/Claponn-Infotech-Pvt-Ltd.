@@ -1,0 +1,88 @@
+.vignette {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.vignette h2,
+.vignette p {
+  margin: 0;
+  padding: 0.5rem 0;
+  background: none; /* Ensure no background is applied */
+}
+
+.vignette .absolute {
+  position: absolute;
+  bottom: 1rem;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  background: none; /* Ensure no background is applied */
+}
+
+.vignette .bottom-left {
+  left: 1rem;
+}
+
+.vignette .bottom-right {
+  right: 1rem;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.11); /* No background */
+  padding: 0.5rem;
+  text-align: center; /* Center text */
+  border-radius: 2.1rem; /* Optional: Rounded corners */
+}
+
+
+.app-container {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar,
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
+  border-top: 1px solid #ccc;
+}
+
+.content-container {
+  flex: 1;
+  margin-top: 30px; /* Adjust based on the height of your navbar */
+  margin-bottom: 40px; /* Adjust based on the height of your footer */
+  overflow-y: auto;
+  padding: 10px; /* Optional, for some spacing */
+}
