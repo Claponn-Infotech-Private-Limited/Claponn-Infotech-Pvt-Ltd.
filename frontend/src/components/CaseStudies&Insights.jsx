@@ -165,7 +165,7 @@ const CaseStudiesInsights = () => {
               key={index}
               className="text-center md:w-1/3 md:p-4 mb-8 md:mb-0"
             >
-              <h2 className="text-4xl sm:text-6xl md:text-8xl text-[#dd2422] font-semibold">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl text-black font-semibold">
                 {result.heading}
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mt-2 md:mt-4">

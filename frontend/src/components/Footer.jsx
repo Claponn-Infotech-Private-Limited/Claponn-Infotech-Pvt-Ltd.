@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaInstagram,
   FaLinkedin,
@@ -11,7 +12,7 @@ import {
 import { images } from "../constants/images"; // Ensure you have your images imported correctly
 
 const Footer = () => (
-  <footer className="bg-[#191919] text-gray-200 py-8 font-uncut mt-10">
+  <footer className="bg-[#191919] text-gray-200 py-8 font-uncut mt-10 h-screen md:h-1/2">
     <div className="container mx-auto px-6 md:px-12 lg:px-36 flex flex-col md:flex-row justify-between">
       {/* Company Logo Section */}
       <div className="mb-6 md:mb-0">
@@ -48,85 +49,78 @@ const Footer = () => (
             </a>
           </div>
           <button className="bg-white text-black py-2 px-4 rounded-3xl text-sm font-semibold mt-4">
-            GET IN TOUCH
+            <Link to={"/contactus"}>GET IN TOUCH</Link>
           </button>
         </div>
       </div>
-      {/* Menu Section */}
-      <div className="mb-6 md:mb-0">
-        <h3 className="text-2xl font-semibold mb-4">Menu</h3>
-        <ul className="space-y-3 text-sm">
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              ABOUT
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              PROJECTS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              SERVICES
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              CONTACT
-            </a>
-          </li>
-        </ul>
-      </div>
-      {/* Corporates Section */}
-      <div className="mb-6 md:mb-0">
-        <h3 className="text-2xl font-semibold mb-4">Corporates</h3>
-        <ul className="space-y-3 text-sm">
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              CAREERS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              CASE STUDIES
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              PRIVACY POLICY
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
-            >
-              TERMS AND CONDITIONS
-            </a>
-          </li>
-        </ul>
+      {/* Menu and Corporates Section */}
+      <div className="mb-6 md:mb-0 flex flex-col sm:grid sm:grid-cols-2 sm:space-x-10">
+        <div className="mb-6 sm:mb-0">
+          <h3 className="text-2xl font-semibold mb-4">Menu</h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                CASE STUDIES
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                SERVICES
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="mb-6 sm:mb-0">
+          <h3 className="text-2xl font-semibold mb-4">Corporates</h3>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                CAREERS
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                PRIVACY POLICY
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-gray-200 hover:text-gray-400 transition-colors duration-300"
+              >
+                TERMS AND CONDITIONS
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       {/* Contact Us Section */}
       <div>
@@ -160,7 +154,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="container mx-auto px-6 md:px-12 lg:px-36 mt-10 border-b border-white"></div>
-    <div className="text-sm flex items-center justify-center mt-6 text-center">
+    <div className="text-sm flex items-center justify-center text-center mt-11 md:mt-6">
       <p>
         All Rights Reserved. Copyright© 2024 Claponn Infotech Private Limited.
       </p>

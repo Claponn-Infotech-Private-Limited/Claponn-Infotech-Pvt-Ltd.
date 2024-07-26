@@ -1,7 +1,7 @@
 import React from "react";
 import { images, company, service, insights } from "../constants/images";
 import HeroCarousel from "./HeroCarousel";
-import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -19,12 +19,12 @@ const LandingPage = () => {
                 We turn brands into stars. Our creator network and tech-savvy
                 approach boost your value in the digital world.
               </p>
-              <a
+              <Link to={"/contactus"}
                 href="#"
                 className="flex items-center justify-center border border-gray-800 w-full lg:w-[10rem] h-[3.5rem] mt-4 lg:mt-6 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
               >
                 GET IN TOUCH
-              </a>
+              </Link>
             </div>
           </div>
           <div className="w-full lg:w-2/5 mt-6 lg:mt-0 flex justify-center lg:justify-center">
@@ -80,7 +80,7 @@ const LandingPage = () => {
                     <img
                       src={comp.logo}
                       alt={`${comp.name} logo`}
-                      className="h-[100px] w-[100px] sm:h-[140px] sm:w-[140px] lg:h-[140px] lg:w-[140px] object-cover rounded-full flex items-center justify-center"
+                      className="h-[100px] w-[100px] sm:h-[140px] sm:w-[140px] lg:h-[130px] lg:w-[130px] object-cover rounded-full flex items-center justify-center"
                     />
                   </div>
                 ))}
@@ -233,26 +233,30 @@ const LandingPage = () => {
                   key={index}
                   className="font-uncut rounded-lg shadow-md overflow-hidden w-full sm:w-[300px] hover:scale-105 transition ease-in cursor-pointer"
                 >
-                  <div className="flex flex-col justify-between font-uncut p-4 h-full">
-                    <div>
-                      <h1 className="text-2xl font-semibold text-gray-900">
-                        {item.heading}
-                      </h1>
-                      <p className="text-xl text-gray-600 mt-2">{item.text}</p>
+                  <Link to={"/casestudiesdetails"}>
+                    <div className="flex flex-col justify-between font-uncut p-4 h-full">
+                      <div>
+                        <h1 className="text-2xl font-semibold text-gray-900">
+                          {item.heading}
+                        </h1>
+                        <p className="text-xl text-gray-600 mt-2">
+                          {item.text}
+                        </p>
+                      </div>
+                      <div className=" flex justify-between items-center p-4 mt-auto">
+                        <p className="text-sm">2 min read Oct,21</p>
+                        <p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                          >
+                            <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                          </svg>
+                        </p>
+                      </div>
                     </div>
-                    <div className=" flex justify-between items-center p-4 mt-auto">
-                      <p className="text-sm">2 min read Oct,21</p>
-                      <p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                        >
-                          <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-                        </svg>
-                      </p>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>

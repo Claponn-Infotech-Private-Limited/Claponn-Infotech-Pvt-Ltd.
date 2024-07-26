@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../constants/images";
+import { Link } from "react-router-dom";
 
 const Dream = () => {
   return (
@@ -24,12 +25,12 @@ const FirstSection = () => {
         revolutionize how people experience their dreams and imaginations in the
         digital realm.
       </p>
-      <a
+      <Link to={"/contactus"}
         href="#"
         className="flex justify-center items-center px-5 py-3 border border-gray-800 w-full md:w-auto h-[3.5rem] mt-6 rounded-[45px] font-bold mx-auto hover:bg-slate-100 transition ease-in"
       >
         GET IN TOUCH
-      </a>
+      </Link>
     </div>
   );
 };

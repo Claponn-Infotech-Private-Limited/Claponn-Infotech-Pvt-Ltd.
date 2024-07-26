@@ -147,31 +147,7 @@ export const heroImages = [
     heading:
       "Recognised by Government Start-up Agencies, Start-up India and DPIIT",
     text: "Ivan's talent shines at Kreative. Their innovative designs consistently impress clients, elevating the agency's reputation. Ivan's creativity and expertise make them a standout in the design world, contributing significantly to Kreativy's success.",
-  },
-  {
-    imageUrl: images.bottom,
-    heading:
-      "Recognised by Government Start-up Agencies, Start-up India and DPIIT",
-    text: "Ivan's talent shines at Kreative. Their innovative designs consistently impress clients, elevating the agency's reputation. Ivan's creativity and expertise make them a standout in the design world, contributing significantly to Kreativy's success.",
-  },
-  {
-    imageUrl: images.bottom,
-    heading:
-      "Recognised by Government Start-up Agencies, Start-up India and DPIIT",
-    text: "Ivan's talent shines at Kreative. Their innovative designs consistently impress clients, elevating the agency's reputation. Ivan's creativity and expertise make them a standout in the design world, contributing significantly to Kreativy's success.",
-  },
-  {
-    imageUrl: images.bottom,
-    heading:
-      "Recognised by Government Start-up Agencies, Start-up India and DPIIT",
-    text: "Ivan's talent shines at Kreative. Their innovative designs consistently impress clients, elevating the agency's reputation. Ivan's creativity and expertise make them a standout in the design world, contributing significantly to Kreativy's success.",
-  },
-  {
-    imageUrl: images.bottom,
-    heading:
-      "Recognised by Government Start-up Agencies, Start-up India and DPIIT",
-    text: "Ivan's talent shines at Kreative. Their innovative designs consistently impress clients, elevating the agency's reputation. Ivan's creativity and expertise make them a standout in the design world, contributing significantly to Kreativy's success.",
-  },
+  }
 ];
 
 export const specialities = [

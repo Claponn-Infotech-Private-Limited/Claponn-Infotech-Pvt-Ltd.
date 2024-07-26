@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../constants/images";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -30,7 +31,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Brand Solutions
           </h2>
-          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-center lg:text-left">
+          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-left lg:text-left">
             <li>Social Media Management</li>
             <li>Original Content Writing</li>
             <li>Video Shoot and Editing</li>
@@ -39,12 +40,11 @@ const Services = () => {
             <li>Product Photography</li>
             <li>Influencer Marketing</li>
           </ul>
-          <a
-            href="#"
+          <Link to={"/"}
             className="inline-block px-5 py-3 border border-gray-800 rounded-[45px] font-bold hover:bg-slate-100 transition ease-in"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Technology Solutions
           </h2>
-          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-center lg:text-left">
+          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-left lg:text-left">
             <li>Web Development</li>
             <li>Mobile App Development</li>
             <li>Search Engine Optimization</li>
@@ -63,12 +63,12 @@ const Services = () => {
             <li>Email Marketing</li>
             <li>Chatbots</li>
           </ul>
-          <a
+          <Link to={"/"}
             href="#"
             className="inline-block px-5 py-3 border border-gray-800 rounded-[45px] font-bold hover:bg-slate-100 transition ease-in"
           >
             Get Started
-          </a>
+          </Link>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 order-1 lg:order-2">
           <img
@@ -91,18 +91,18 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Media Solutions
           </h2>
-          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-center lg:text-left">
+          <ul className="list-disc pl-5 text-lg space-y-2 mb-6 text-left lg:text-left">
             <li>Media Buying</li>
             <li>Performance Marketing</li>
             <li>Public Relations</li>
             <li>3D Designing</li>
           </ul>
-          <a
+          <Link to={"/"}
             href="#"
             className="inline-block px-5 py-3 border border-gray-800 rounded-[45px] font-bold hover:bg-slate-100 transition ease-in"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </>

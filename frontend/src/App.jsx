@@ -7,6 +7,7 @@ import Services from './components/Services';
 import CaseStudiesInsights from "./components/CaseStudies&Insights"
 import About from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import Dream from "./components/Dream"
 import './App.css';
 
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/casestudies" element={<CaseStudiesInsights />} />
+            <Route path="/casestudiesdetails" element={<CaseStudiesInsights />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/contactus" element={<ContactUs />} />
+            <Route path='/casestudies' element = {<Dream/>}/>
           </Routes>
         </main>
         <Footer />

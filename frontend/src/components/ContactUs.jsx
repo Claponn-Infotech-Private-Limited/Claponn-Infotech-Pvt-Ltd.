@@ -45,60 +45,64 @@ const ContactForm = () => {
   };
   return (
     <>
-      <div className="font-uncut px-10 sm:px-20">
+      <div className="font-uncut md:px-10 sm:px-20">
         <h2 className="text-4xl font-semibold mb-4 mt-10">Contact Us</h2>
         <p className="mb-7 text-xl text-gray-600">
           Get in Touch With Claponn! We're here to assist you with any
           questions, feedback, or inquiries.
         </p>
-        <form onSubmit={onSubmit}>
-          <div className="mb-5">
-            <input
-              className="w-full p-2 border border-gray-300 rounded-md"
-              type="text"
-              id="name"
-              placeholder="Enter Name"
-              value={name}
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <input
-              className="w-full p-2 border border-gray-300 rounded-md"
-              type="email"
-              id="email"
-              placeholder="Enter Email Address"
-              value={email}
-              onChange={onChange}
-              required
-            />
-          </div>
-          <div className="mb-7">
-            <textarea
-              className="w-full p-2 border border-gray-300 rounded-md"
-              id="message"
-              placeholder="Message"
-              rows="4"
-              value={message}
-              onChange={onChange}
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="px-5 py-3 border border-gray-800 w-full lg:w-[10rem] h-[3.5rem] lg:mt-6 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
-            disabled={isLoading}
-          >
-            {isLoading ? "Submitting..." : "Submit"}
-          </button>
-          {successMessage && (
-            <p className="mt-4 text-center text-green-500">{successMessage}</p>
-          )}
-          {errorMessage && (
-            <p className="mt-4 text-center text-red-500">{errorMessage}</p>
-          )}
-        </form>
+        <div className="md:px-0">
+          <form onSubmit={onSubmit}>
+            <div className="mb-5">
+              <input
+                className="w-full p-2 border border-gray-300 rounded-md"
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+                value={name}
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <input
+                className="w-full p-2 border border-gray-300 rounded-md"
+                type="email"
+                id="email"
+                placeholder="Enter Email Address"
+                value={email}
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className="mb-7">
+              <textarea
+                className="w-full p-2 border border-gray-300 rounded-md"
+                id="message"
+                placeholder="Message"
+                rows="4"
+                value={message}
+                onChange={onChange}
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="px-5 py-3 border border-gray-800 w-full lg:w-[10rem] h-[3.5rem] lg:mt-6 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
+              disabled={isLoading}
+            >
+              {isLoading ? "Submitting..." : "Submit"}
+            </button>
+            {successMessage && (
+              <p className="mt-4 text-center text-green-500">
+                {successMessage}
+              </p>
+            )}
+            {errorMessage && (
+              <p className="mt-4 text-center text-red-500">{errorMessage}</p>
+            )}
+          </form>
+        </div>
       </div>
     </>
   );
@@ -114,13 +118,36 @@ const ContactImage = ({ src, alt }) => {
 
 const FAQ = () => {
   const questions = [
-    { question: "Question 1", answer: "Answer to question 1." },
-    { question: "Question 2", answer: "Answer to question 2." },
-    { question: "Question 3", answer: "Answer to question 3." },
-    { question: "Question 4", answer: "Answer to question 4." },
-    { question: "Question 5", answer: "Answer to question 5." },
-    { question: "Question 6", answer: "Answer to question 6." },
-    { question: "Question 7", answer: "Answer to question 7." },
+    {
+      question: "What is Claponn?",
+      answer:
+        "Claponn is a consulting firm specializing in media and telecommunications. We work with clients across multiple domains to provide strategic advice and innovative solutions.",
+    },
+    {
+      question: "What services does Claponn offer?",
+      answer: "Answer to question 2.",
+    },
+    {
+      question: "Which industries does Claponn serve?",
+      answer: "Answer to question 3.",
+    },
+    {
+      question: "How can Claponn help my business?",
+      answer: "Answer to question 4.",
+    },
+    {
+      question: "Does Claponn offer customized solutions?",
+      answer: "Answer to question 5.",
+    },
+    {
+      question:
+        "Does Claponn work with small businesses or only large corporations?",
+      answer: "Answer to question 6.",
+    },
+    {
+      question: "Can I get a quote for Claponn's services?",
+      answer: "Answer to question 7.",
+    },
   ];
 
   return (
