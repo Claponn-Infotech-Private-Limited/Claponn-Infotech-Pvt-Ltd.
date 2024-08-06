@@ -20,7 +20,6 @@ const LandingPage = () => {
                 approach boost your value in the digital world.
               </p>
               <Link to={"/contactus"}
-                href="#"
                 className="flex items-center justify-center border border-gray-800 w-full lg:w-[10rem] h-[3.5rem] mt-4 lg:mt-6 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
               >
                 GET IN TOUCH
