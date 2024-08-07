@@ -24,7 +24,7 @@ const ContactForm = () => {
     setSuccessMessage("");
     setErrorMessage("");
     try {
-      const res = await axios.post("https://claponn-backend-2.onrender.com", formData);
+      const res = await axios.post("https://claponn-backend-2.onrender.com/api/form", formData);
       if (res && res.data) {
         console.log(res.data);
         // Clear the form after successful submission
