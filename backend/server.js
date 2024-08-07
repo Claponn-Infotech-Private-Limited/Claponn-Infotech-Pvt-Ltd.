@@ -9,7 +9,7 @@ const dotenv = require("dotenv")
 const app = express();
 
 app.use(cors({
-  origin : "http://localhost:5173",
+  origin : "http://localhost:5173/contactus",
   methods : ["GET", "POST"],
 }));
 app.use(bodyParser.json());
