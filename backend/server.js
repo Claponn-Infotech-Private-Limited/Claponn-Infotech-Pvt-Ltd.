@@ -8,12 +8,10 @@ const dotenv = require("dotenv")
 
 const app = express();
 
-app.use(cors(
-  {
-    origin : "https://claponn1.netlify.app/",
-    methods: ['GET', 'POST'],
-  }
-));
+app.use(cors({
+  origin : "http://localhost:5173",
+  methods : ["GET", "POST"],
+}));
 app.use(bodyParser.json());
 dotenv.config();
 app.use("/api/form", formRoutes);
