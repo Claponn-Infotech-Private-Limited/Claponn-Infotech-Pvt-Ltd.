@@ -25,7 +25,8 @@ const FirstSection = () => {
         revolutionize how people experience their dreams and imaginations in the
         digital realm.
       </p>
-      <Link to={"/contactus"}
+      <Link
+        to={"/contactus"}
         href="#"
         className="flex justify-center items-center px-5 py-3 border border-gray-800 w-full md:w-auto h-[3.5rem] mt-6 rounded-[45px] font-bold mx-auto hover:bg-slate-100 transition ease-in"
       >
@@ -172,30 +173,19 @@ const FifthSection = () => {
         <h2 className="text-3xl md:text-5xl font-semibold">
           Designing for Humans
         </h2>
-        <p className="mt-4 text-lg md:text-2xl">
-          In this case study, we focused on creating a media and entertainment
-          website that resonates with human users. Our goal is to enhance
-          engagement, encourage exploration, and provide a seamless experience.
+        <p className="mt-4 text-lg md:text-2xl text-gray-600 md:mr-20">
+          Our experts ensure that the designs are human-centric, resulting in
+          products that are not only visually appealing but also intuitive and
+          easy to use.
         </p>
-        <div className="mt-4">
-          <h3 className="font-semibold text-2xl md:text-3xl">
-            Increased Engagement Metrics:
-          </h3>
-          <ul className="list-disc ml-4 md:ml-0 text-left md:text-left">
-            <li className="text-lg md:text-xl mt-2">
-              Achievement: Boosted average session duration by 30%.
-            </li>
-          </ul>
-        </div>
-        <div className="mt-4">
-          <h3 className="font-semibold text-2xl md:text-3xl">
-            Reduced Bounce Rate:
-          </h3>
-          <ul className="list-disc ml-4 md:ml-0 text-left md:text-left">
-            <li className="text-lg md:text-xl mt-2">
-              Achievement: Decreased bounce rate from 60% to 40%.
-            </li>
-          </ul>
+        <div className="mt-8 md:mr-20">
+          <Link
+            to={"/casestudies"}
+            href="#"
+            className="flex justify-center md:justify-start items-center px-5 py-3 border border-gray-800 w-full md:w-auto h-[3.5rem] rounded-[45px] font-bold hover:bg-slate-100 transition ease-in"
+          >
+            VIEW CASE STUDIES
+          </Link>
         </div>
       </div>
     </div>

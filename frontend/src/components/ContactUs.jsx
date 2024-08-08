@@ -23,26 +23,23 @@ const ContactForm = () => {
     setIsLoading(true);
     setSuccessMessage("");
     setErrorMessage("");
+
     try {
-      const res = await axios.post("https://claponn-backend-2.onrender.com/api/form", formData);
-      if (res && res.data) {
-        console.log(res.data);
-        // Clear the form after successful submission
-        setFormData({ name: "", email: "", message: "" });
-        setSuccessMessage("Your message has been sent successfully!");
-      } else {
-        setErrorMessage("Unexpected response format.");
-      }
-    } catch (err) {
-      console.error(err);
-      setErrorMessage(
-        err.response?.data?.message ||
-          "There was an error sending your message. Please try again."
-      );
+      await axios.post("http://localhost:5000/send", { name, email, message });
+      setSuccessMessage("Message sent successfully!");
+      // Reset the form data
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setErrorMessage("Failed to send message. Please try again later.");
     } finally {
       setIsLoading(false);
     }
   };
+
   return (
     <>
       <div className="font-uncut md:px-10 sm:px-20">

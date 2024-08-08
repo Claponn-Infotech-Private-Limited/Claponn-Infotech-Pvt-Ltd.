@@ -17,7 +17,8 @@ const About = () => {
           is dedicated to adding values to brands with modern strategies and
           proven technology advancements.
         </p>
-        <Link to={"/contactus"}
+        <Link
+          to={"/contactus"}
           href="#"
           className="flex justify-center items-center px-4 py-3 border border-gray-800 w-full md:w-auto lg:w-[10rem] h-[3.5rem] mt-4 lg:mt-6 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
         >
@@ -96,7 +97,8 @@ const About = () => {
             or media specialist, <br className="hidden md:block" /> there's a
             place for you here.
           </p>
-          <Link to={"/contactus"}
+          <Link
+            to={"/contactus"}
             href="#"
             className="flex justify-center items-center px-4 py-3 border border-gray-800 w-full md:w-auto lg:w-[10rem] h-[3.5rem] mt-4 lg:mt-3 rounded-[45px] font-bold mx-auto lg:mx-0 hover:bg-slate-100 transition ease-in"
           >

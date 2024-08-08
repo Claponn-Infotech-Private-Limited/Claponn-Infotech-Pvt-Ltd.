@@ -1,28 +1,18 @@
-// server.js
 const express = require("express");
-const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const formRoutes = require("./routes/formRoutes");
-const dotenv = require("dotenv")
-
+const dotenv = require("dotenv");
+const connectDB = require("./db/connectDB");
 const app = express();
 
-app.use(cors({
-  origin : "http://localhost:5173/contactus",
-  methods : ["GET", "POST"],
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 dotenv.config();
-app.use("/api/form", formRoutes);
+app.use("/send", formRoutes);
 
-mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 
